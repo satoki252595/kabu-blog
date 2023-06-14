@@ -96,7 +96,7 @@ if __name__ == '__main__':
 
     db = firestore.client()
 
-    df, date = getCreditBalance(DATEAGO=5)
+    df, date = getCreditBalance(DATEAGO=1)
 
     for i, code in enumerate(df.index):
 

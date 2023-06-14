@@ -35,13 +35,7 @@ def setStockPrice(code, period):
 
 
 df_stockCodes = getStockCodes()
-# stockCodesList = [str(l) for l in df_stockCodes['コード']]
-
-# 無料枠を利用するため。銘柄コードが1のものを中心に取得する。
-# 1,2,3,4,5,6は完了。
-
-stockCodesList = [str(l) for l in df_stockCodes['コード']
-                  if str(l).startswith('7')]
+stockCodesList = [str(l) for l in df_stockCodes['コード']]
 
 for code in stockCodesList:
-    setStockPrice(code, period='10y')
+    setStockPrice(code, period='1d')
