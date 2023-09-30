@@ -5,10 +5,14 @@ from firebase_admin import firestore
 from method.getStockInfo import getStockInfo
 from method.getStocCodes import getStockCodes
 
+import os
+
+# パス取得
+pwd = os.getcwd()
 
 # Use a service account.
 cred = credentials.Certificate(
-    '/Users/satoki252595/work/20230527_kabu_python/kabu-blog-18f635ac9b82.json')
+    pwd + '/kabu-blog-18f635ac9b82.json')
 
 app = firebase_admin.initialize_app(cred)
 
